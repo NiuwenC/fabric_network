@@ -6,7 +6,7 @@ networks:
 services:
   ca-tls:
     container_name: ca-tls
-    image: hyperledger/fabric-ca:1.4.2
+    image: hyperledger/fabric-ca:1.4.8
     command: sh -c 'fabric-ca-server start -d -b tls-ca-admin:tls-ca-adminpw --port 7052'
     environment:
         - FABRIC_CA_SERVER_HOME=/tmp/hyperledger/fabric-ca/crypto
@@ -23,7 +23,7 @@ services:
 
   rca-org0:
     container_name: rca-org0
-    image: hyperledger/fabric-ca:1.4.2
+    image: hyperledger/fabric-ca:1.4.8
     command: sh -c 'fabric-ca-server start -d -b rca-org0-admin:rca-org0-adminpw --port 7053'
     environment:
         - FABRIC_CA_SERVER_HOME=/tmp/hyperledger/fabric-ca/crypto
@@ -40,7 +40,7 @@ services:
 
   rca-org1:
     container_name: rca-org1
-    image: hyperledger/fabric-ca:1.4.2
+    image: hyperledger/fabric-ca:1.4.8
     command: sh -c 'fabric-ca-server start -d -b rca-org1-admin:rca-org1-adminpw --port 7054'
     environment:
         - FABRIC_CA_SERVER_HOME=/tmp/hyperledger/fabric-ca/crypto
@@ -57,7 +57,7 @@ services:
 
   rca-org2:
     container_name: rca-org2
-    image: hyperledger/fabric-ca:1.4.2
+    image: hyperledger/fabric-ca:1.4.8
     command: /bin/bash -c 'fabric-ca-server start -d -b rca-org2-admin:rca-org2-adminpw --port 7055'
     environment:
         - FABRIC_CA_SERVER_HOME=/tmp/hyperledger/fabric-ca/crypto
@@ -74,7 +74,7 @@ services:
 
   peer1-org1:
     container_name: peer1-org1
-    image: hyperledger/fabric-peer:1.4.2
+    image: hyperledger/fabric-peer:2.2.0
     environment:
         - CORE_PEER_ID=peer1-org1
         - CORE_PEER_ADDRESS=peer1-org1:7051
@@ -100,7 +100,7 @@ services:
 
   peer2-org1:
     container_name: peer2-org1
-    image: hyperledger/fabric-peer:1.4.2
+    image: hyperledger/fabric-peer:2.2.0
     environment:
         - CORE_PEER_ID=peer2-org1
         - CORE_PEER_ADDRESS=peer2-org1:7051
@@ -127,7 +127,7 @@ services:
 
   peer1-org2:
     container_name: peer1-org2
-    image: hyperledger/fabric-peer:1.4.2
+    image: hyperledger/fabric-peer:2.2.0
     environment:
         - CORE_PEER_ID=peer1-org2
         - CORE_PEER_ADDRESS=peer1-org2:7051
@@ -153,7 +153,7 @@ services:
 
   peer2-org2:
     container_name: peer2-org2
-    image: hyperledger/fabric-peer:1.4.2
+    image: hyperledger/fabric-peer:2.2.0
     environment:
         - CORE_PEER_ID=peer2-org2
         - CORE_PEER_ADDRESS=peer2-org2:7051
@@ -180,7 +180,7 @@ services:
 
   orderer1-org0:
     container_name: orderer1-org0
-    image: hyperledger/fabric-orderer:1.4.2
+    image: hyperledger/fabric-orderer:2.2.0
     environment:
         - ORDERER_HOME=/tmp/hyperledger/orderer
         - ORDERER_HOST=orderer1-org0
@@ -202,7 +202,7 @@ services:
 
   cli-org1:
     container_name: cli-org1
-    image: hyperledger/fabric-tools:1.4.2
+    image: hyperledger/fabric-tools:2.2.0
     tty: true
     stdin_open: true
     environment:
@@ -226,7 +226,7 @@ services:
 
   cli-org2:
    container_name: cli-org2
-   image: hyperledger/fabric-tools:1.4.2
+   image: hyperledger/fabric-tools:2.2.0
    tty: true
    stdin_open: true
    environment:
