@@ -1,0 +1,12 @@
+ca-tls  7052
+rca-org0 7053
+rca-org1 7054
+rca-org2 7055
+
+peer1-org1 8051
+peer2-org1 8052
+
+peer1-org1 9051
+peer2-org2 9052
+
+orderer 7050

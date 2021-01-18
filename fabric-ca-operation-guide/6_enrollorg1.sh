@@ -68,7 +68,13 @@ cp /tmp/hyperledger/org1/admin/msp/signcerts/cert.pem /tmp/hyperledger/org1/peer
 mkdir -p /tmp/hyperledger/org1/admin/msp/admincerts
 cp /tmp/hyperledger/org1/admin/msp/signcerts/cert.pem /tmp/hyperledger/org1/admin/msp/admincerts/org1-admin-cert.pem
 
-mkdir -p /tmp/hyperledger/org1/msp/{admincerts,cacerts,tlscacerts,users}
+
+
+mkdir -p /tmp/hyperledger/org1/msp/admincerts
+mkdir -p /tmp/hyperledger/org1/msp/cacerts
+mkdir -p /tmp/hyperledger/org1/msp/tlscacerts
+mkdir -p /tmp/hyperledger/org1/msp/users
+
 cp /tmp/hyperledger/org1/peer1/assets/ca/org1-ca-cert.pem /tmp/hyperledger/org1/msp/cacerts/
 cp /tmp/hyperledger/org1/peer1/assets/tls-ca/tls-ca-cert.pem /tmp/hyperledger/org1/msp/tlscacerts/
 cp /tmp/hyperledger/org1/admin/msp/signcerts/cert.pem /tmp/hyperledger/org1/msp/admincerts/admin-org1-cert.pem

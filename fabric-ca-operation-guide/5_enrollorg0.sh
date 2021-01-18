@@ -35,7 +35,12 @@ fabric-ca-client enroll -d -u https://admin-org0:org0adminpw@0.0.0.0:7053
 mkdir -p /tmp/hyperledger/org0/orderer/msp/admincerts
 cp /tmp/hyperledger/org0/admin/msp/signcerts/cert.pem /tmp/hyperledger/org0/orderer/msp/admincerts/orderer-admin-cert.pem
 
-mkdir -p /tmp/hyperledger/org0/msp/{admincerts,cacerts,tlscacerts,users}
+
+mkdir -p /tmp/hyperledger/org0/msp/admincerts
+mkdir -p /tmp/hyperledger/org0/msp/cacerts
+mkdir -p /tmp/hyperledger/org0/msp/tlscacerts
+mkdir -p /tmp/hyperledger/org0/msp/users
+
 cp /tmp/hyperledger/org0/orderer/assets/ca/org0-ca-cert.pem /tmp/hyperledger/org0/msp/cacerts/
 cp /tmp/hyperledger/org0/orderer/assets/tls-ca/tls-ca-cert.pem /tmp/hyperledger/org0/msp/tlscacerts/
 cp /tmp/hyperledger/org0/admin/msp/signcerts/cert.pem /tmp/hyperledger/org0/msp/admincerts/admin-org0-cert.pem
